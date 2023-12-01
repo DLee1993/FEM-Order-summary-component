@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+    --Paleblue: hsl(225, 100%, 94%);
+    --Brightblue: hsl(245, 75%, 52%);
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --Desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    color: var(--Darkblue);
+    background-color: var(--Paleblue);
+    background-image: url("./images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all 0.5s ease;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+.order-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 400px;
+    min-height: 90vh;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.order-summary-illustration img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.order-summary-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    flex: 1 1 auto;
+    padding: 0px 40px;
+}
+.order-summary-info h1 {
+    font-weight: 900;
+}
+
+.order-summary-info p {
+    text-align: center;
+    font-size: 14px;
+    color: var(--Desaturatedblue);
+    line-height: 1.3rem;
+}
+
+.subscription-info {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 20px 15px;
+    border-radius: 5px;
+    background-color: var(--Verypaleblue);
+}
+
+.subscription-info img {
+    width: 40px;
+    height: 40px;
+}
+
+.subscription-info p {
+    display: flex;
+    flex-direction: column;
+    font-weight: 900;
+    margin-left: 20px;
+    color: var(--Darkblue);
+}
+
+.subscription-info p span {
+    color: var(--Desaturatedblue);
+    font-weight: 500;
+}
+
+.subscription-info a {
+    font-size: 12px;
+    margin-left: auto;
+    color: var(--Brightblue);
+    font-weight: 900;
+}
+
+.subscription-info a:hover {
+    font-weight: 700;
+}
+
+.order-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.order-buttons button {
+    border-radius: 5px;
+    padding: 12px;
+    font-weight: 900;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+#proceed {
+    background-color: var(--Brightblue);
+    color: white;
+    margin-bottom: 10px;
+}
+
+#proceed:hover {
+    opacity: 80%;
+    box-shadow: 0px 10px 15px rgba(56, 41, 224, 0.4);
+}
+
+#cancel {
+    background-color: transparent;
+    color: var(--Desaturatedblue);
+}
+
+#cancel:hover {
+    color: var(--Darkblue);
+}
+
+a {
+    color: var(--Brightblue);
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        background-image: url("./images/pattern-background-desktop.svg");
+    }
+}
